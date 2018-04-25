@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: e68a77834b0180843912930ef81466e0
+timeCreated: 1443456272
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Green_leafsMat
+    100004: LeafsMat
+    100006: LightWoodMat
+    100008: RedMushroomMat
+    100010: WoodMat
+    100012: Mat
+    100014: Green_leafs
+    100016: Leafs
+    100018: LightWood
+    100020: RedMushroom
+    100022: Wood
+    400000: //RootNode
+    400002: Green_leafsMat
+    400004: LeafsMat
+    400006: LightWoodMat
+    400008: RedMushroomMat
+    400010: WoodMat
+    400012: Mat
+    400014: Green_leafs
+    400016: Leafs
+    400018: LightWood
+    400020: RedMushroom
+    400022: Wood
+    2300000: Green_leafsMat
+    2300002: LeafsMat
+    2300004: LightWoodMat
+    2300006: RedMushroomMat
+    2300008: WoodMat
+    2300010: Mat
+    2300012: Green_leafs
+    2300014: Leafs
+    2300016: LightWood
+    2300018: RedMushroom
+    2300020: Wood
+    3300000: Green_leafsMat
+    3300002: LeafsMat
+    3300004: LightWoodMat
+    3300006: RedMushroomMat
+    3300008: WoodMat
+    3300010: Mat
+    3300012: Green_leafs
+    3300014: Leafs
+    3300016: LightWood
+    3300018: RedMushroom
+    3300020: Wood
+    4300000: Green_leafsMat
+    4300002: LeafsMat
+    4300004: LightWoodMat
+    4300006: RedMushroomMat
+    4300008: WoodMat
+    4300010: Mat
+    4300012: Green_leafs
+    4300014: Leafs
+    4300016: LightWood
+    4300018: RedMushroom
+    4300020: Wood
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

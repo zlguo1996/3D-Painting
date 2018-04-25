@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene_tracker.unity
+- path: Assets/Plugins/Paint in 3D/Examples/Mouse Painting.unity
   isLoaded: 1
   isActive: 1

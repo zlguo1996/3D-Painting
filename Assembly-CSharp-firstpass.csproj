@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{554CCA61-0556-355E-237C-8AF400238410}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_1;UNITY_5_6;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_ClickToPaint.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_ClickToPaintChange.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_ClickToPaintSubstep.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_ClickToSpawn.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_ClickToThrow.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_CoverageMonitor.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_CoverageMonitorRGBA.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_DestroyAfterTime.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_Gui.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_MouseLook.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_MouseMove.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_PaintBetween.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_PaintExplosion.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_PaintNearby.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_PaintOnCollision.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_PaintParticleCollisions.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Examples\Scripts\P3D_PrefabSpawner.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_BlendMode.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_BrushPreview.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_AdditiveBlend.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_AlphaBlend.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_AlphaBlendRGB.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_AlphaErase.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_NormalBlend.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_Replace.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Brush_SubtractiveBlend.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_CoordType.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Editor.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Format.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Group.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_GroupMask.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Helper.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Helper_Editor.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Matrix.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Node.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Paintable.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_PaintableTexture.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Painter.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_PropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Rect.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Result.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_TexturePreview.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Tree.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_Triangle.cs" />
+     <Compile Include="Assets\Plugins\Paint in 3D\Scripts\P3D_UndoState.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\AnimatorGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\CameraGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\ConstantMotionGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\GenericCurveGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\GenericGradientGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\GenericTriggerGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\GlobalSettingGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\JitterMotionGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\LightGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\MaterialGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\ParticleSystemGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\SpawnerGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\TransformGear.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Injector\AudioInjector.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Injector\SystemAudioInjector.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\GenericLink.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\InjectorBase.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\InjectorLink.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\Modifier.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\Perlin.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\ReaktorLink.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\Remote.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Internal\Trigger.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Reaktor\Reaktor.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\BandPassFilter.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\ConstantMotion.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\GenericAudioInput.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\JitterMotion.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\ObjectParticleSystem.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\Planter.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\SelfDestruction.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\Spawner.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\TurbulentMotion.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Utility\VariableMotion.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrush\Scripts\BrushDescriptor.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrush\Scripts\BrushManifest.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrush\Scripts\SerializableGuid.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrush\Scripts\VisualizerAudioInput.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrush\Scripts\VisualizerManager.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Orbit.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\React.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Sequence.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\BaseTrigger.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\PulseScale.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\StoryArrowNavigation.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\StoryManager.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\StoryScene.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\StoryTeleportPoint.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Story\StoryTeleportTrigger.cs" />
+     <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\VRInput.cs" />
+     <Compile Include="Assets\Plugins\WRMHL\Scripts\Manager\wrmhl.cs" />
+     <Compile Include="Assets\Plugins\WRMHL\Scripts\Thread\Common\wrmhlThread.cs" />
+     <Compile Include="Assets\Plugins\WRMHL\Scripts\Thread\wrmhlThread_Lines.cs" />
+     <Compile Include="Assets\Plugins\WRMHL\Scripts\wrmhlRead.cs" />
+     <Compile Include="Assets\Plugins\WRMHL\Scripts\wrmhlWrite.cs" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Shaders\Skybox.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Bubbles\Bubbles.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\SoftHighlighter\SoftHighlighter.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Hypercolor\Hypercolor.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\HyperGrid\HyperGrid.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Toon\Toon.shader" />
+     <None Include="Assets\Plugins\Paint in 3D\Examples\Shaders\P3D Cutout RGBA.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseOpaque.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Shaders\Unlit-Diffuse.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Disco\Disco.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\WaveformPulse\NeonPulse.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Highlighter\AdditiveCutout.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Shaders\Include\Brush.cginc" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Waveform\Waveform.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\VelvetInk\VelvetInk.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Stars\Stars.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Shared\Shaders\Bloom.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Embers\Embers.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Blocks\BlocksPaper\BlocksPaper.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Blocks\BlocksGlass\BlocksGlass.shader" />
+     <None Include="Assets\Plugins\TiltBrush\ThirdParty\Noise\Shaders\Noise.cginc" />
+     <None Include="Assets\Plugins\Paint in 3D\Shaders\Resources\P3D_TexturePreview.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\LightWire\LightWire.shader" />
+     <None Include="Assets\Plugins\Paint in 3D\Shaders\Resources\P3D_BrushPreview.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Shared\Shaders\Diffuse.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Shared\Shaders\Unlit.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Materials\AlwaysVisible.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\DoubleTaperedFlat\DiffuseNoTextureDoubleSided.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Shaders\Include\Particles.cginc" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Fire\Fire.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Streamers\Streamers.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Rainbow\Rainbow.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\DoubleTaperedMarker\DoubleTaperedMarker.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Plasma\Plasma.shader" />
+     <None Include="Assets\Plugins\Paint in 3D\Examples\Shaders\P3D Cutout RGBA Normal.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\VERSION.txt" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Dots\Dots.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Blocks\BlocksGem\BlocksGem.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Electricity\Electricity.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Smoke\Smoke.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Snow\Snow.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\ChromaticWave\ChromaticWave.shader" />
+     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Shared\Shaders\Standard.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="CSCore">
+ <HintPath>/Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码-其他平台/Unity/PressPen/Assets/Plugins/TiltBrush/ThirdParty/CSCore/CSCore.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
