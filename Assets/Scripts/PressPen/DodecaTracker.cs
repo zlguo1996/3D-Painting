@@ -17,6 +17,9 @@ public class DodecaTracker : MonoBehaviour {
 	[Tooltip("calibration board marker map")]
 	public string board_marker_map_path = "/Resources/parameters/board/board_marker_map.yml";
 
+	public string pentip_path = "/Resources/parameters/pens/pentip_calibration.yml";
+	public string dodeca_center_path = "/Resources/parameters/pens/dodeca_center_calibration.yml";
+
 	[Tooltip("visualize PressPen pose")]
 	public GameObject press_pen;
 	[Tooltip("visualize web camera pose")]
@@ -36,6 +39,10 @@ public class DodecaTracker : MonoBehaviour {
 	private static extern bool _reset ();
 
 	[DllImport("DodecaTrackerPlugin")]
+	private static extern bool _isValid();
+
+	// ------------ 初始化 ----------------
+	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _initCamera(string camera_parameter_path, int deviceNum);
 
 	[DllImport("DodecaTrackerPlugin")]
@@ -47,26 +54,61 @@ public class DodecaTracker : MonoBehaviour {
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _initPenDetector();
 
+	// -------------- 检测 ------------------
+	// dodeca
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _grab();
-
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _detect();
-
+	[DllImport("DodecaTrackerPlugin")]
+	private static extern bool _getPose(float[] rvec, float[] tvec);
+	// camera
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern int _detectMarkers();
-
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _calibrateCameraPose (string calib_marker_map_path);
-
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _getCameraPose (float[] rvec, float[] tvec);
 
-	[DllImport("DodecaTrackerPlugin")]
-	private static extern bool _getPose(float[] rvec, float[] tvec);
+
+
+	// ----------- 笔尖 & 正十二面体中心 ---------
 
 	[DllImport("DodecaTrackerPlugin")]
-	private static extern bool _isValid();
+	private static extern bool _setPenTip(string file_path);
+	[DllImport("DodecaTrackerPlugin")]
+	private static extern bool _setPenDodecaCenter(string file_path);
+	[DllImport("DodecaTrackerPlugin")]
+	private static extern bool _getPenTipPosition(float[] tvec);
+	[DllImport("DodecaTrackerPlugin")]
+	private static extern bool _getPenDodecaCenterPosition(float[] tvec);
+
+	public bool setPenTip(string file_path){
+		return _setPenTip (file_path);
+	}
+	public bool setPenDodecaCenter(string file_path){
+		return _setPenDodecaCenter (file_path);
+	}
+	public bool getPenTipPosition(ref Vector3 tvec){
+		float[] tvec_f = new float[3];
+		bool success = _getPenTipPosition (tvec_f);
+
+		if(!success) return success;
+
+		tvec.x = tvec_f [0];
+		tvec.y = tvec_f [1];
+		tvec.z = tvec_f [2];
+	}
+	public bool getPenDodecaCenterPosition(ref Vector3 tvec){
+		float[] tvec_f = new float[3];
+		bool success = _getPenTipPosition (tvec_f);
+
+		if(!success) return success;
+
+		tvec.x = tvec_f [0];
+		tvec.y = tvec_f [1];
+		tvec.z = tvec_f [2];
+	}
 
 	void Start(){
 		camera_parameter_path = Application.dataPath + camera_parameter_path;
@@ -102,17 +144,19 @@ public class DodecaTracker : MonoBehaviour {
 		success = _initPenDetector ();
 		Debug.Assert (success);
 
+		Debug.Assert (System.IO.File.Exists (pentip_path));
+		success = setPenTip (pentip_path);
+		Debug.Assert (success);
+
+		Debug.Assert (System.IO.File.Exists (dodeca_center_path));
+		success = setPenDodecaCenter (dodeca_center_path);
+		Debug.Assert (success);
+
 		isInit = true;
 		return true;
 	}
-
-	public bool reset(){
-		bool success = true;
-		if (isInit) {
-			success = _reset ();
-			isInit = false;
-		}
-		return success;
+	void OnDisable(){
+		reset ();
 	}
 
 	void Update(){
@@ -160,6 +204,15 @@ public class DodecaTracker : MonoBehaviour {
 		}
 	}
 
+	public bool reset(){
+		bool success = true;
+		if (isInit) {
+			success = _reset ();
+			isInit = false;
+		}
+		return success;
+	}
+	
 	public bool grab(){
 		return _grab ();
 	}
@@ -217,9 +270,5 @@ public class DodecaTracker : MonoBehaviour {
 
 	public bool isValid(){
 		return _isValid ();
-	}
-
-	void OnDisable(){
-		reset ();
 	}
 }

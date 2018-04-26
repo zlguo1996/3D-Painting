@@ -27,6 +27,15 @@ public struct PoseInfo{
 		this.index = my_index;
 	}
 }
+public struct PositionInfo{
+	public Vector3 tvec;
+	public uint index;
+
+	public PositionInfo(Vector3 my_tvec, uint my_index){
+		this.tvec = my_tvec;
+		this.index = my_index;
+	}
+}
 
 public class PressPen : MonoBehaviour {
 	public PressMeasure press_measure;
@@ -34,16 +43,20 @@ public class PressPen : MonoBehaviour {
 
 	public UnityEvent OnDetectCamera = new UnityEvent();
 	public UnityEvent OnDetectDodeca = new UnityEvent();
+	public UnityEvent OnDetectPoint = new UnityEvent ();
 
 	[HideInInspector]
 	public List<PoseInfo> frames_cam = new List<PoseInfo> ();
 	[HideInInspector]
 	public List<FrameInfo> frames_dodeca = new List<FrameInfo> ();
 	[HideInInspector]
+	public List<PositionInfo> frames_point = new List<PositionInfo> ();
+	[HideInInspector]
 	public uint cur_frame_idx = 0;
 
 	private UnityAction<Vector3, Vector3, uint> cam_detected_action;
 	private UnityAction<Vector3, Vector3, uint> dodeca_detected_action;
+	private UnityAction<Vector3, uint> point_detected_action;
 
 	// Use this for initialization
 	void Start () {
@@ -51,6 +64,8 @@ public class PressPen : MonoBehaviour {
 		dodeca_tracker_thread.on_detect_cam.AddListener (cam_detected_action);
 		dodeca_detected_action += onDetectDodeca;
 		dodeca_tracker_thread.on_detect_dodeca.AddListener (dodeca_detected_action);
+		point_detected_action += onDetectPoint;
+		dodeca_tracker_thread.on_detect_point.AddListener(point_detected_action);
 	}
 	
 	// Update is called once per frame
@@ -64,6 +79,9 @@ public class PressPen : MonoBehaviour {
 
 	public FrameInfo getFrame(){
 		return frames_dodeca [frames_dodeca.Count - 1];
+	}
+	public PositionInfo getPointPosition(){
+		return frames_point [frames_dodeca.Count - 1];
 	}
 //	public float getPressure(){
 //		Debug.Assert (frames.Count != 0);
@@ -89,5 +107,10 @@ public class PressPen : MonoBehaviour {
 		frames_dodeca.Add(new FrameInfo(rvec, tvec, pressure, frame_idx));
 
 		OnDetectDodeca.Invoke ();
+	}
+	private void onDetectPoint(Vector3 tvec, uint frame_idx){
+		frames_point.Add (new PositionInfo (tvec, frame_idx));
+
+		OnDetectPoint.Invoke ();
 	}
 }
