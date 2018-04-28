@@ -98,6 +98,8 @@ public class DodecaTracker : MonoBehaviour {
 		tvec.x = tvec_f [0];
 		tvec.y = tvec_f [1];
 		tvec.z = tvec_f [2];
+
+		return true;
 	}
 	public bool getPenDodecaCenterPosition(ref Vector3 tvec){
 		float[] tvec_f = new float[3];
@@ -108,6 +110,8 @@ public class DodecaTracker : MonoBehaviour {
 		tvec.x = tvec_f [0];
 		tvec.y = tvec_f [1];
 		tvec.z = tvec_f [2];
+
+		return true;
 	}
 
 	void Start(){

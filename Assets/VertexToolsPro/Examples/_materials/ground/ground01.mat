@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ground01
+  m_Shader: {fileID: 4800000, guid: d32ed31f478cb4d92bac8d130e6eb1a0, type: 3}
+  m_ShaderKeywords: _USEP1_2_ON _USEP1_3_ON
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d8948f39d32264fa8beec237b9a882a5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap2:
+        m_Texture: {fileID: 2800000, guid: 6602fb7e4685b439db81d80eff4e5494, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap3:
+        m_Texture: {fileID: 2800000, guid: adb48fff6982240d39dc48334ae1388f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinedMap:
+        m_Texture: {fileID: 2800000, guid: f5b5a4cbd3a114063924cfffca620693, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinedMap2:
+        m_Texture: {fileID: 2800000, guid: 62998ce6f2acd476182f4e1e62b296a0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CombinedMap3:
+        m_Texture: {fileID: 2800000, guid: 308c4742d679b42d39b2295d18a8c3d7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5b1c6e4fa1a3d420a9b3f17ea59eb000, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: b3e296096a1a04a12ab67db446d78dd1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex3:
+        m_Texture: {fileID: 2800000, guid: 448ac09bb521741078593e23174f2891, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BaseHeight2: 1
+    - _BaseHeight3: 0.87
+    - _BlendSmooth2: 0.106
+    - _BlendSmooth3: 0.061
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DepthBias: 18
+    - _DepthBiasPower: 2
+    - _DepthBiasThreshold: 0
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Emission: 0
+    - _Emission2: 0
+    - _Emission3: 0
+    - _FlowSpeed2: 0.25
+    - _FlowSpeed3: 0.05
+    - _Glossiness: 0.5
+    - _HeightBasedTransparency2: 0
+    - _HeightBasedTransparency3: 0.43
+    - _HeightmapFactor2: 0.187
+    - _HeightmapFactor3: 0.079
+    - _Metallic: 0
+    - _Metallic2: 0
+    - _Metallic3: 0
+    - _Mode: 0
+    - _Occlusion: 1
+    - _Occlusion2: 1
+    - _Occlusion3: 1
+    - _OcclusionStrength: 1
+    - _Parallax: -0.025
+    - _Parallax2: -0.01
+    - _Parallax3: -0.0042
+    - _ParallaxInterpolation: 10
+    - _Smoothness: 0.85
+    - _Smoothness2: 0.85
+    - _Smoothness3: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    - _flowOnlyNormal: 0
+    - _showAlpha: 0
+    - _showBlue: 1
+    - _showGeneral: 1
+    - _showGreen: 1
+    - _showParallax: 1
+    - _showRed: 1
+    - _showVertexColor: 0
+    - _showVertexFlow: 0
+    - _useDepthBias: 1
+    - _useDrift2: 1
+    - _useDrift3: 1
+    - _useFlowMap2: 0
+    - _useFlowMap3: 0
+    - _useFlowMapGlobal: 0
+    - _useHeightBasedBlending: 1
+    - _useP1_2: 1
+    - _useP1_3: 0
+    - _useParallax: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor2: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor3: {r: 0, g: 0, b: 0, a: 1}
