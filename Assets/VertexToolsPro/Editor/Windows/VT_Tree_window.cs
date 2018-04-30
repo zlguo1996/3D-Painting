@@ -993,7 +993,7 @@ public class VT_Tree_window : EditorWindow {
 
 
 
-		if( (toolState == "curPainting") && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
+		if( (toolState == "curPainting") && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
 
 			drawVertexColor ();
 			drawJobListStepBack = 0;

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/VertexToolsPro/Examples/_scenes/VTP_demoscene_animator_look.unity
+- path: Assets/Scenes/Scene_tracker2.unity
   isLoaded: 1
   isActive: 1

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DodecaTracker : MonoBehaviour {
 	[Tooltip("video capture parameter file path")]
@@ -26,8 +27,16 @@ public class DodecaTracker : MonoBehaviour {
 	public GameObject web_cam;
 
 	public enum STATUS {NONE, CALIB, TRACK};
+	public UnityEvent statChangeEvent = new UnityEvent ();
 	[HideInInspector]
-	public STATUS stat = STATUS.NONE;
+	public STATUS stat{
+		get { return _stat;}
+		set {
+			_stat = value;
+			statChangeEvent.Invoke ();
+		}
+	}
+	private STATUS _stat;
 
 	[HideInInspector]
 	public bool isInit = false;
@@ -116,10 +125,12 @@ public class DodecaTracker : MonoBehaviour {
 
 	void Start(){
 		camera_parameter_path = Application.dataPath + camera_parameter_path;
-
 		marker_map_path = Application.dataPath + marker_map_path;
-
 		board_marker_map_path = Application.dataPath + board_marker_map_path;
+		pentip_path = Application.dataPath + pentip_path;
+		dodeca_center_path = Application.dataPath + dodeca_center_path;
+
+		stat = STATUS.NONE;
 
 		init ();
 	}

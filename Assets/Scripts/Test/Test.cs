@@ -10,6 +10,8 @@ public class Test : MonoBehaviour {
 
 	private Thread t;
 
+	public GameObject go;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,7 +24,10 @@ public class Test : MonoBehaviour {
 
 	public void on_detect_pen(){
 		FrameInfo frame_info = press_pen.getFrame();
-		Debug.Log (frame_info.tvec);
+		//Debug.Log (frame_info.tvec);
+		Vector3 tvec = frame_info.tvec;
+		tvec.Scale (new Vector3 (20.0f, 20.0f, 20.0f));
+		go.transform.position = tvec;
 	}
 
 	public void start_tracking(){

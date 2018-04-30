@@ -2033,7 +2033,7 @@ public class VT_EA_window : EditorWindow {
 
 		}
 
-		if (toolState == "curFlowing" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
+		if (toolState == "curFlowing" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
 
 
 
@@ -2051,28 +2051,28 @@ public class VT_EA_window : EditorWindow {
 
 		}
 
-		if( (toolState == "curPainting" || toolState == "curWetting") && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
+		if( (toolState == "curPainting" || toolState == "curWetting") && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
 
 			drawVertexColor ();
 			drawJobListStepBack = 0;
 		}
 
-		if( toolState == "curDeforming" && deformMode != "smooth" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
+		if( toolState == "curDeforming" && deformMode != "smooth" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown) && e.button == 0 && !e.shift && !e.alt && !e.control) {
 
 			deformVertices (1);
 			deformJobListStepBack = 0;
-		} else if ( toolState == "curDeforming" && deformMode != "smooth" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown) && e.button == 0 && e.control && !e.shift && !e.alt) {
+		} else if ( toolState == "curDeforming" && deformMode != "smooth" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown) && e.button == 0 && e.control && !e.shift && !e.alt) {
 
 			deformVertices (-1);
 			deformJobListStepBack = 0;
 		}
 
-		if( toolState == "curDeforming" && deformMode == "smooth" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown ) && e.button == 0 && !e.shift && !e.alt && !e.control) {
+		if( toolState == "curDeforming" && deformMode == "smooth" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown ) && e.button == 0 && !e.shift && !e.alt && !e.control) {
 			smoothMesh ();
 			deformJobListStepBack = 0;
 		}
 
-		if( toolState == "curRefining" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.mouseDown ) && e.button == 0 && !e.shift && !e.alt && !e.control) {
+		if( toolState == "curRefining" && brushHitOnObject &&  (e.type == EventType.MouseDrag || e.type == EventType.MouseDown ) && e.button == 0 && !e.shift && !e.alt && !e.control) {
 			refineTriangle ();
 		}
 
