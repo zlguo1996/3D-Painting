@@ -57,7 +57,7 @@
      <Compile Include="Assets\Scripts\PressPen\DodecaTrackerThread.cs" />
      <Compile Include="Assets\Scripts\PressPen\PressMeasure.cs" />
      <Compile Include="Assets\Scripts\PressPen\PressPen.cs" />
-     <Compile Include="Assets\Scripts\PressPen\StatVisulization.cs" />
+     <Compile Include="Assets\Scripts\PressPen\UIManager.cs" />
      <Compile Include="Assets\Scripts\Test\Bluetooth.cs" />
      <Compile Include="Assets\Scripts\Test\Test.cs" />
      <Compile Include="Assets\Scripts\Test\WebCamera.cs" />

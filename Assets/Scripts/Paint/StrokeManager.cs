@@ -53,7 +53,10 @@ public class StrokeManager : MonoBehaviour {
 
 		PositionInfo frame_info = press_pen.getPointPosition ();
 		Debug.Log (frame_info.tvec);
-		Vector3 tvec = frame_info.tvec;
+		Vector3 tvec = new Vector3();// = frame_info.tvec;
+		tvec.x = frame_info.tvec.y;
+		tvec.y = -frame_info.tvec.x;
+		tvec.z = frame_info.tvec.z;
 		tvec.Scale (new Vector3 (20.0f, 20.0f, 20.0f));
 		if (draw_status == DrawStatus.START) {
 			StartPainting (tvec, /*(float)frame_info.pressure/10.0f*/0.1f);
