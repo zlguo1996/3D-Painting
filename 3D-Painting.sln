@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D-Painting", "Assembly-CSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D-Painting", "Assembly-CSharp-Editor-firstpass.csproj", "{51DC796F-5C07-A0E1-6899-ACC4BF2E1F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D-Painting", "Assembly-CSharp-Editor.csproj", "{7055F0C0-3908-C576-FFFB-C822173A036A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{51DC796F-5C07-A0E1-6899-ACC4BF2E1F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51DC796F-5C07-A0E1-6899-ACC4BF2E1F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51DC796F-5C07-A0E1-6899-ACC4BF2E1F20}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7055F0C0-3908-C576-FFFB-C822173A036A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7055F0C0-3908-C576-FFFB-C822173A036A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7055F0C0-3908-C576-FFFB-C822173A036A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7055F0C0-3908-C576-FFFB-C822173A036A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

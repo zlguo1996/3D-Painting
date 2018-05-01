@@ -61,34 +61,6 @@
      <Compile Include="Assets\Scripts\Test\Bluetooth.cs" />
      <Compile Include="Assets\Scripts\Test\Test.cs" />
      <Compile Include="Assets\Scripts\Test\WebCamera.cs" />
-     <Compile Include="Assets\VertexToolsPro\API\VTP.cs" />
-     <Compile Include="Assets\VertexToolsPro\Examples\_scripts\rotate.cs" />
-     <Compile Include="Assets\VertexToolsPro\Examples\_scripts\RotationAnimation.cs" />
-     <Compile Include="Assets\VertexToolsPro\MeshHolder.cs" />
-     <Compile Include="Assets\VertexToolsPro\SpeedTree\instanceStream.cs" />
-     <Compile Include="Assets\VertexToolsPro\SpeedTree\terrainStream.cs" />
-     <Compile Include="Assets\VertexToolsPro\VertexColorAnimator.cs" />
-     <Compile Include="Assets\VertexToolsPro\VertexColorStream.cs" />
-     <Compile Include="Assets\VertexToolsPro\VertexStreamChildrenRebuilder.cs" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\SpeedTree\SpeedTree_Branch_VTP_Tessellation.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\SpeedTree\SpeedTree_VTPUtil.cginc" />
-     <None Include="Assets\VertexToolsPro\Shader\Metallic\Metallic_3Tex_Advanced_Wet.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\SpeedTree\SpeedTree_Branch_VTP.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\Specular\Specular_2Tex_Advanced.shader" />
-     <None Include="Assets\VertexToolsPro\Resources\faceHighlight.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\SpeedTree\SpeedTree_VTP_Vertex.cginc" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\Specular_Tesselation_V2.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\Specular\Specular_3Tex_Advanced.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\Glass_2Tex_Advanced.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\Metallic_Mobile_V2.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\VTPUtil.cginc" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\Metallic_V2.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\Specular_Mobile_V2.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\Metallic_Tesselation_V2.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\Metallic\Metallic_2Tex_Advanced.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\Metallic\Metallic_3Tex_Advanced.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\Specular_V2.shader" />
-     <None Include="Assets\VertexToolsPro\Shader\V2\SpeedTree\SpeedTree_Leaf_VTP.shader" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>

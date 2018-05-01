@@ -106,6 +106,31 @@
      <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Editor\SequenceEditor.cs" />
      <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Editor\SequenceUtils.cs" />
      <Compile Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Scripts\Editor\StoryTeleportPointEditor.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\EditorScripts\VertexColorStream_AVS.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\EditorScripts\VertexColorStreamEditor.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\EditorScripts\VertexStreamChildrenRebuilderEditor.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Menus\VPP_Menus.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\ShaderGUI\ShaderEditor.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\ShaderGUI\ShaderEditor2Tex.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\ShaderGUI\ShaderEditor3TexWet.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\ShaderGUI\ShaderEditorGlass.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\ShaderGUI\ShaderEditorSpecular.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\ShaderGUI\ShaderEditorSpecular2Tex.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Utils\MeshUtils.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Utils\SmoothFilter.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Utils\VPP_Utils.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Windows\VCA_window.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Windows\VT_EA_window.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Windows\VT_Tree_window.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Editor\Windows\VT_window.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\Editor\ShaderEditor_Spec_Tesselation_V2.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\Editor\ShaderEditor_Spec_V2.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\Editor\ShaderEditor_Tesselation_V2.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\Editor\ShaderEditor_V2.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\SpeedTree\Editor\ShaderEditor_SpeedTree_Branch.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\SpeedTree\Editor\ShaderEditor_SpeedTree_Branch_Tesselation.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\Shader\V2\SpeedTree\Editor\ShaderEditor_SpeedTree_Leaf.cs" />
+     <Compile Include="Assets\Plugins\VertexToolsPro\SpeedTree\Editor\terrainStreamEditor.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
