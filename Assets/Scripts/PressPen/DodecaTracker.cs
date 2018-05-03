@@ -103,7 +103,7 @@ public class DodecaTracker : MonoBehaviour {
 
 		return success;
 	}
-	public bool _getPose(ref Matrix4x4 rt_mat){
+	public bool getPose(ref Matrix4x4 rt_mat){
 		float[] rt_vec = new float[16];
 		bool success = _getPoseM(rt_vec);
 
@@ -150,7 +150,7 @@ public class DodecaTracker : MonoBehaviour {
 
 		return success;
 	}
-	public bool _getCameraPose(ref Matrix4x4 rt_mat){
+	public bool getCameraPose(ref Matrix4x4 rt_mat){
 		float[] rt_vec = new float[16];
 		bool success = _getCameraPoseM(rt_vec);
 
@@ -178,6 +178,8 @@ public class DodecaTracker : MonoBehaviour {
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _setPenDodecaCenterM(float[] rt_mat);
 	[DllImport("DodecaTrackerPlugin")]
+	private static extern bool _savePenTipPosition (float[] rt_mat, string file_path);
+	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _getPenTipPose(float[] rt_mat);
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _getPenDodecaCenterPose(float[] rt_mat);
@@ -201,6 +203,13 @@ public class DodecaTracker : MonoBehaviour {
 			rt_vec[i] = rt_mat[i/4, i%4];
 		}
 		return _setPenDodecaCenterM(rt_vec);
+	}
+	public bool savePenTipPosition (Matrix4x4 rt_mat, string file_path){
+		float[] rt_vec = new float[16];
+		for(int i=0; i<16; i++){
+			rt_vec[i] = rt_mat[i/4, i%4];
+		}
+		return _savePenTipPosition(rt_vec, file_path);
 	}
 	public bool getPenTipPosition(ref Vector3 tvec){
 		float[] tvec_f = new float[3];

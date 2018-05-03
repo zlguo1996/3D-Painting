@@ -4,28 +4,22 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Threading;
 
-public class PoseDetectedEvent: UnityEvent<Vector3, Vector3, uint>{}
-public class PointDetectedEvent: UnityEvent<Vector3, uint>{}
+public class PoseDetectedEvent: UnityEvent<Matrix4x4, uint>{}
 
 public class DodecaTrackerThread : MonoBehaviour {
 	public DodecaTracker dodeca_tracker;
 	public PoseDetectedEvent on_detect_dodeca = new PoseDetectedEvent();
-	public PointDetectedEvent on_detect_point = new PointDetectedEvent();
 	public PoseDetectedEvent on_detect_cam = new PoseDetectedEvent();
 
 	// dodeca position
 	[HideInInspector]
-	public Vector3 cur_rotation;
-	[HideInInspector]
-	public Vector3 cur_translation;
+	public Matrix4x4 cur_pose;
 	[HideInInspector]
 	public Vector3 cur_point_position;
 
 	// camera position
 	[HideInInspector]
-	public Vector3 cam_rotation;
-	[HideInInspector]
-	public Vector3 cam_translation;
+	public Matrix4x4 cam_pose;
 
 	// frame idx
 	[HideInInspector]
@@ -34,7 +28,6 @@ public class DodecaTrackerThread : MonoBehaviour {
 	private Thread track_thread;
 	private Thread calib_thread; 
 	private List<PoseInfo> track_poses_buffer = new List<PoseInfo>();
-	private List<PositionInfo> track_positions_buffer = new List<PositionInfo> ();
 	private List<PoseInfo> calib_poses_buffer = new List<PoseInfo>();
 
 	// Use this for initialization
@@ -47,15 +40,11 @@ public class DodecaTrackerThread : MonoBehaviour {
 	void Update () {
 		// 清空缓冲区
 		foreach (PoseInfo pose in track_poses_buffer) {
-			on_detect_dodeca.Invoke (pose.rvec, pose.tvec, pose.index);
+			on_detect_dodeca.Invoke (pose.rt_mat, pose.index);
 		}
 		track_poses_buffer.Clear ();
-		foreach (PositionInfo position in track_positions_buffer) {
-			on_detect_point.Invoke (position.tvec, position.index);
-		}
-		track_positions_buffer.Clear ();
 		foreach (PoseInfo pose in calib_poses_buffer) {
-			on_detect_cam.Invoke (pose.rvec, pose.tvec, pose.index);
+			on_detect_cam.Invoke (pose.rt_mat, pose.index);
 		}
 		calib_poses_buffer.Clear ();
 	}
@@ -93,11 +82,9 @@ public class DodecaTrackerThread : MonoBehaviour {
 		while (dodeca_tracker.stat == DodecaTracker.STATUS.TRACK) {
 			if (dodeca_tracker.grab()) {
 				if (dodeca_tracker.detect()) {
-					dodeca_tracker.getPose (ref cur_rotation, ref cur_translation);
-					dodeca_tracker.getPenTipPosition (ref cur_point_position);
+					dodeca_tracker.getPose (ref cur_pose);
 
-					track_poses_buffer.Add (new PoseInfo (cur_rotation, cur_translation, cur_frame_idx));
-					track_positions_buffer.Add (new PositionInfo (cur_point_position, cur_frame_idx));
+					track_poses_buffer.Add (new PoseInfo (cur_pose, cur_frame_idx));
 				}
 				cur_frame_idx++;
 			}
@@ -126,9 +113,9 @@ public class DodecaTrackerThread : MonoBehaviour {
 		while (dodeca_tracker.stat == DodecaTracker.STATUS.CALIB) {
 			if (dodeca_tracker.grab()) {
 				if (dodeca_tracker.detectMarkers()>=10 && dodeca_tracker.calibrateCameraPose()) {
-					dodeca_tracker.getCameraPose (ref cam_rotation, ref cam_translation);
+					dodeca_tracker.getCameraPose (ref cam_pose);
 
-					calib_poses_buffer.Add(new PoseInfo (cam_rotation, cam_translation, cur_frame_idx));
+					calib_poses_buffer.Add(new PoseInfo (cam_pose , cur_frame_idx));
 				}
 				cur_frame_idx++;
 			}
