@@ -46,12 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Paint\Stroke.cs" />
+     <Compile Include="Assets\Scripts\Paint\StrokeManager.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\DodecaTracker.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\DodecaTrackerThread.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\PressMeasure.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\PressPen.cs" />
      <Compile Include="Assets\Scripts\PressPen\PentipCalibrator.cs" />
      <Compile Include="Assets\Scripts\PressPen\UIManager.cs" />
+     <Compile Include="Assets\Scripts\Test\Bluetooth.cs" />
+     <Compile Include="Assets\Scripts\Test\Test.cs" />
+     <Compile Include="Assets\Scripts\Test\WebCamera.cs" />
      <None Include="Assets\Plugins\TiltBrush\TiltBrushExamples\Assets\Shaders\Skybox.shader" />
      <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Bubbles\Bubbles.shader" />
      <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\SoftHighlighter\SoftHighlighter.shader" />
