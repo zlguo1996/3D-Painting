@@ -1,11 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PressPen/PentipCalibrator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneBuilder/OperatingTable.cs">
     <Files>
-      <File FileName="Assets/Scripts/PressPen/PentipCalibrator.cs" Line="34" Column="106" />
+      <File FileName="Assets/Scripts/SceneBuilder/Model.cs" Line="69" Column="2" />
+      <File FileName="Assets/Scripts/SceneBuilder/ModelBox.cs" Line="65" Column="24" />
+      <File FileName="Assets/Scripts/SceneBuilder/PenController.cs" Line="68" Column="44" />
+      <File FileName="Assets/Scripts/SceneBuilder/OperatingTable.cs" Line="25" Column="73" />
+      <File FileName="Assets/Scripts/Paint/StrokeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PressPen/PentipCalibrator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PressPen/UIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PressPen/Core/PressPen.cs" Line="43" Column="62" />
-      <File FileName="Assets/Scripts/PressPen/Core/DodecaTracker.cs" Line="22" Column="81" />
+      <File FileName="Assets/Scripts/PressPen/Core/PressPen.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Test/Test.cs" Line="26" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

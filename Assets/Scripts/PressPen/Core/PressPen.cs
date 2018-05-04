@@ -30,7 +30,6 @@ public class PressPen : MonoBehaviour {
 
 	public UnityEvent OnDetectCamera = new UnityEvent();
 	public UnityEvent OnDetectDodeca = new UnityEvent();
-	public UnityEvent OnDetectPoint = new UnityEvent ();
 
 	[HideInInspector]
 	public List<PoseInfo> frames_cam = new List<PoseInfo> ();
@@ -123,5 +122,10 @@ public static class MatrixExtensions
 		scale.y = new Vector4(matrix.m01, matrix.m11, matrix.m21, matrix.m31).magnitude;
 		scale.z = new Vector4(matrix.m02, matrix.m12, matrix.m22, matrix.m32).magnitude;
 		return scale;
+	}
+
+	public static Vector3 ScaleTo(this Vector3 position, float scale){
+		position.Scale (new Vector3 (scale, scale, scale));
+		return position;
 	}
 }

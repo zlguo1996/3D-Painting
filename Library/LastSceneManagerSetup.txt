@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Calibration/Pentip Calibration.unity
+- path: Assets/Scenes/Application/Scene Builder.unity
   isLoaded: 1
   isActive: 1
