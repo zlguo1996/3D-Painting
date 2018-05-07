@@ -6,18 +6,23 @@ using System.Collections;
 public class UIManager : MonoBehaviour
 {
 	public PressPen press_pen;
-	public GameObject stat_text;
+
+	public Text stat_text;
+
+	public Text pressure_text;
+	public Slider pressure_slider;
 
 	private string status_string{
 		get { return _status_string;}
 		set {
-			stat_text.GetComponent<Text>().text = value;
+			stat_text.text = value;
 			_status_string = value;
 		}
 	}
 	private string _status_string;
 
 	private UnityAction stat_change_action;
+	private UnityAction pressure_chage_action;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +31,9 @@ public class UIManager : MonoBehaviour
 
 		stat_change_action += on_stat_change;
 		press_pen.dodeca_tracker_thread.dodeca_tracker.statChangeEvent.AddListener (stat_change_action);
+
+		pressure_chage_action += on_pressure_change;
+		press_pen.press_measure.on_pressure_detected.AddListener (pressure_chage_action);
 	}
 	
 	// Update is called once per frame
@@ -63,5 +71,9 @@ public class UIManager : MonoBehaviour
 		press_pen.dodeca_tracker_thread.stopCalibration ();
 	}
 
+	void on_pressure_change(){
+		pressure_text.text = press_pen.press_measure.pressure.ToString();
+		pressure_slider.value = (float)press_pen.press_measure.pressure;
+	}
 }
 

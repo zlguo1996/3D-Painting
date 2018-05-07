@@ -51,9 +51,9 @@ public class StrokeManager : MonoBehaviour {
 		if (draw_status == DrawStatus.NONE)
 			return;
 
-		PositionInfo frame_info = press_pen.getPointPosition ();
-		Debug.Log (frame_info.tvec);
-		Vector3 tvec = frame_info.tvec;
+		FrameInfo frame_info = press_pen.getFrame ();
+		Debug.Log (frame_info.rt_mat);
+		Vector3 tvec = (frame_info.rt_mat*press_pen.dodeca_tracker_thread.dodeca_tracker.pen_tip_pose).ExtractPosition();
 		tvec.Scale (new Vector3 (20.0f, 20.0f, 20.0f));
 		if (draw_status == DrawStatus.START) {
 			StartPainting (tvec, /*(float)frame_info.pressure/10.0f*/0.1f);

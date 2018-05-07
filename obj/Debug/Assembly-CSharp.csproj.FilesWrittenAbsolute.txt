@@ -77,3 +77,8 @@
 /Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/Unity.Cecil.Mdb.dll
 /Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/Mono.Cecil.dll
+/Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/guozile/Documents/GitHub/3D-Painting/Temp/bin/Debug/UnityEngine.VR.dll
