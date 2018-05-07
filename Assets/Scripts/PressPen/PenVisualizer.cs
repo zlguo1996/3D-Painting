@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class PenVisualizer : MonoBehaviour {
 	public PressPen press_pen;
+	public float scale_parameter = 20.0f;
 
 	UnityAction on_detect_pen;
 
@@ -21,7 +22,7 @@ public class PenVisualizer : MonoBehaviour {
 
 	void change_go_pose(){
 		FrameInfo fi = press_pen.getFrame ();
-		this.gameObject.transform.localPosition = fi.rt_mat.ExtractPosition().ScaleTo(20.0f);
+		this.gameObject.transform.localPosition = fi.rt_mat.ExtractPosition().ScaleTo(scale_parameter);
 		this.gameObject.transform.localRotation = fi.rt_mat.ExtractRotation();
 	}
 }

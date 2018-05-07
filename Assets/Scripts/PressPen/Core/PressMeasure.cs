@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using UnityEngine.Events;
 
 // 用于获得通过蓝牙获得的压力数据
 public class PressMeasure : MonoBehaviour {
@@ -21,18 +22,33 @@ public class PressMeasure : MonoBehaviour {
 	public int QueueLenght = 1;
 
 	[Tooltip("Listen rate")]
-	public int WaitTime = 10;	// 监听时间间隔(ms)
+	public int WaitTime = 1;	// 监听时间间隔(ms)
 
 	[HideInInspector]
 	public int pressure = 0;	//存储该帧的压力
 
-	private bool isListening; //是否处于监听压力状态
+	private bool isListening = false; //是否处于监听压力状态
+
+	public UnityEvent on_pressure_detected = new UnityEvent ();
+
+	//test
+	private UnityAction ac;
+	private int count = 0;
+	private void onPD(){
+		count++;
+		Debug.Log (pressure);
+	}
 
 	// Use this for initialization
 	void Start () {
 		myDevice.set (PortName, BaudRate, ReadTimeout, QueueLenght); // This method set the communication with the following vars;
 		//                              Serial Port, Baud Rates, Read Timeout and QueueLenght.
-		// myDevice.connect (); // This method open the Serial communication with the vars previously given.
+
+		connectBT ();
+		startListening ();
+
+		ac += onPD;
+		on_pressure_detected.AddListener (ac);
 	}
 	
 	// Update is called once per frame
@@ -48,10 +64,6 @@ public class PressMeasure : MonoBehaviour {
 			Vector3 position = this.transform.position;
 			this.GetComponent<Transform> ().position = new Vector3 (position.x, pressure / 100.0f, position.z);
 		}
-	}
-
-	void OnApplicationQuit() { // close the Thread and Serial Port
-		myDevice.close();
 	}
 
 	// 监听蓝牙数据
@@ -91,10 +103,21 @@ public class PressMeasure : MonoBehaviour {
 		while (isListening) {
 			int p=0;
 			bool success = getPressure (ref p);
+			if (p == 0)
+				continue;
 			if (success) {
 				pressure = p;
+				on_pressure_detected.Invoke ();
+				yield return new WaitForSeconds (0.001f * WaitTime);
 			}
-			yield return new WaitForSeconds (0.001f * WaitTime);
+
 		}
+	}
+
+	void OnApplicationQuit(){
+		if (isListening) {
+			stopListening ();
+		}
+		closeBT ();
 	}
 }

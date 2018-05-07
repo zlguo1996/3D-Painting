@@ -66,6 +66,7 @@ public class DodecaTrackerThread : MonoBehaviour {
 		Debug.Assert (dodeca_tracker.isInit);
 		dodeca_tracker.stat = DodecaTracker.STATUS.TRACK;
 
+		track_thread = new Thread (track);
 		track_thread.Start ();
 
 		return true;
@@ -74,6 +75,8 @@ public class DodecaTrackerThread : MonoBehaviour {
 	public bool stopTracking(){
 		Debug.Assert (dodeca_tracker.stat == DodecaTracker.STATUS.TRACK);
 		dodeca_tracker.stat = DodecaTracker.STATUS.NONE;
+
+		track_thread.Join ();
 
 		return true;
 	}
@@ -97,6 +100,7 @@ public class DodecaTrackerThread : MonoBehaviour {
 		Debug.Assert (dodeca_tracker.isInit);
 		dodeca_tracker.stat = DodecaTracker.STATUS.CALIB;
 		 
+		calib_thread = new Thread (calib);
 		calib_thread.Start ();
 
 		return true;

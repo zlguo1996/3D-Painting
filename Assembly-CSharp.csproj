@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Paint\Stroke.cs" />
      <Compile Include="Assets\Scripts\Paint\StrokeManager.cs" />
+     <Compile Include="Assets\Scripts\PressPen\CameraVisualizer.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\DodecaTracker.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\DodecaTrackerThread.cs" />
      <Compile Include="Assets\Scripts\PressPen\Core\PressMeasure.cs" />
