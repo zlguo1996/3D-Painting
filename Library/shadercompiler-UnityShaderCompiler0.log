@@ -1,2 +1,127 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=4463 outsize=1347 ok=1
+Cmd: preprocess
+  insize=2022 outsize=1578 ok=1
+Cmd: preprocess
+  insize=2229 outsize=1003 ok=1
+Cmd: preprocess
+  insize=5375 outsize=1090 ok=1
+Cmd: preprocess
+  insize=3085 outsize=1784 ok=1
+Cmd: preprocess
+  insize=2453 outsize=1101 ok=1
+Cmd: preprocess
+  insize=2281 outsize=1694 ok=1
+Cmd: preprocess
+  insize=3465 outsize=1796 ok=1
+Cmd: preprocess
+  insize=2051 outsize=2143 ok=1
+Cmd: preprocess
+  insize=1483 outsize=1688 ok=1
+Cmd: preprocess
+  insize=2182 outsize=3594 ok=1
+Cmd: preprocess
+  insize=2273 outsize=1024 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (26): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=4893 outsize=1318 ok=0
+Cmd: preprocess
+  insize=2755 outsize=3484 ok=1
+Cmd: preprocess
+  insize=3810 outsize=1395 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (46): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=3957 outsize=1315 ok=0
+Cmd: preprocess
+  insize=1893 outsize=1978 ok=1
+Cmd: preprocess
+  insize=3565 outsize=1067 ok=1
+Cmd: preprocess
+  insize=2508 outsize=1167 ok=1
+Cmd: preprocess
+  insize=3140 outsize=1115 ok=1
+Cmd: preprocess
+  insize=1852 outsize=1067 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (41): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=3274 outsize=1101 ok=0
+Cmd: preprocess
+  insize=1337 outsize=531 ok=1
+Cmd: preprocess
+  insize=4175 outsize=1211 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (42): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=4172 outsize=1150 ok=0
+Cmd: preprocess
+  insize=2187 outsize=540 ok=1
+Cmd: preprocess
+  insize=2265 outsize=1018 ok=1
+Cmd: preprocess
+  insize=3143 outsize=1181 ok=1
+Cmd: preprocess
+  insize=4845 outsize=2200 ok=1
+Cmd: preprocess
+  insize=4011 outsize=1240 ok=1
+Cmd: preprocess
+  insize=2164 outsize=1071 ok=1
+Cmd: preprocess
+  insize=2217 outsize=842 ok=1
+Cmd: preprocess
+  insize=3478 outsize=2205 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (44): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=4217 outsize=1276 ok=0
+Cmd: preprocess
+  insize=1470 outsize=972 ok=1
+Cmd: preprocess
+  insize=2063 outsize=718 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (47): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=5706 outsize=1405 ok=0
+Cmd: preprocess
+  error: 2 plat 20 at (25): Can't find include file Assets/ThirdParty/Noise/Shaders/Noise.cginc
+  insize=4486 outsize=1036 ok=0
+Cmd: preprocess
+  insize=1149 outsize=2061 ok=1
+Cmd: compileSnippet
+  error: 2 plat 15 at (47): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=4648 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (25): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3765 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (25): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3769 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (46): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=2989 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (41): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=2520 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (42): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3369 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (44): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3287 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (26): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3530 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (26): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3530 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0
+Cmd: compileSnippet
+  error: 2 plat 15 at (26): failed to open source file: 'Assets/ThirdParty/Noise/Shaders/Noise.cginc'\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA
+  api=15 type=0 insize=3530 outsize=0 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=0

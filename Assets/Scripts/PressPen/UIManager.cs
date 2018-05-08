@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
 		press_pen.dodeca_tracker_thread.dodeca_tracker.statChangeEvent.AddListener (stat_change_action);
 
 		pressure_chage_action += on_pressure_change;
-		press_pen.press_measure.on_pressure_detected.AddListener (pressure_chage_action);
+		press_pen.press_measure.OnDetectPressure.AddListener (pressure_chage_action);
 	}
 	
 	// Update is called once per frame

@@ -29,15 +29,7 @@ public class PressMeasure : MonoBehaviour {
 
 	private bool isListening = false; //是否处于监听压力状态
 
-	public UnityEvent on_pressure_detected = new UnityEvent ();
-
-	//test
-	private UnityAction ac;
-	private int count = 0;
-	private void onPD(){
-		count++;
-		Debug.Log (pressure);
-	}
+	public UnityEvent OnDetectPressure = new UnityEvent ();
 
 	// Use this for initialization
 	void Start () {
@@ -46,9 +38,6 @@ public class PressMeasure : MonoBehaviour {
 
 		connectBT ();
 		startListening ();
-
-		ac += onPD;
-		on_pressure_detected.AddListener (ac);
 	}
 	
 	// Update is called once per frame
@@ -107,7 +96,7 @@ public class PressMeasure : MonoBehaviour {
 				continue;
 			if (success) {
 				pressure = p;
-				on_pressure_detected.Invoke ();
+				OnDetectPressure.Invoke ();
 				yield return new WaitForSeconds (0.001f * WaitTime);
 			}
 

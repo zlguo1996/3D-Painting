@@ -48,17 +48,16 @@ public class DodecaTrackerThread : MonoBehaviour {
 		}
 		calib_poses_buffer.Clear ();
 	}
-		
-	public IEnumerator reset(){
-		// 关闭线程
-		dodeca_tracker.stat = DodecaTracker.STATUS.NONE;
-		yield return new WaitUntil (() => track_thread.IsAlive==false);
-		yield return new WaitUntil (() => calib_thread.IsAlive == false);
 
-		// 重置追踪器
-		dodeca_tracker.reset();
+	public void reset(){
+		if (dodeca_tracker.stat == DodecaTracker.STATUS.TRACK) {
+			stopTracking ();
+		} else if (dodeca_tracker.stat == DodecaTracker.STATUS.CALIB) {
+			stopCalibration ();
+		}
+
+		dodeca_tracker.reset ();
 	}
-
 
 	// ---------- tracking -------------
 	public bool startTracking(){
@@ -127,6 +126,6 @@ public class DodecaTrackerThread : MonoBehaviour {
 	}
 
 	void OnApplicationQuit(){
-		StartCoroutine(reset());
+		reset ();
 	}
 }

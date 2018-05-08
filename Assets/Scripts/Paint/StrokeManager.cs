@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
  
 enum DrawStatus {START, ADD, END, NONE};
 
 public class StrokeManager : MonoBehaviour {
 	public GameObject stroke_prefab;
 	public PressPen press_pen;
+	public int pressure_threshold = 1000;
 
 	private GameObject cur_stroke = null;
 	private DrawStatus draw_status = DrawStatus.NONE;
@@ -18,14 +20,13 @@ public class StrokeManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// test
 		if (Input.GetKeyDown(KeyCode.A)) {
 			draw_status = DrawStatus.START;
 			Debug.Log ("start painting");
 		}
 		if (Input.GetKeyUp (KeyCode.A)) {
 			draw_status = DrawStatus.END;
-			EndPainting ();
-			draw_status = DrawStatus.NONE;
 			Debug.Log ("stop painting");
 		}
 	}
@@ -41,6 +42,9 @@ public class StrokeManager : MonoBehaviour {
 	}
 
 	void EndPainting(){
+		if (cur_stroke==null) {
+			return;
+		}
 		if (cur_stroke.GetComponent<Stroke>().point_nums<2) {
 			Destroy (cur_stroke);
 		}
@@ -60,6 +64,19 @@ public class StrokeManager : MonoBehaviour {
 			draw_status = DrawStatus.ADD;
 		} else if (draw_status == DrawStatus.ADD) {
 			AddPoint (tvec);
+		} else if (draw_status == DrawStatus.END) {
+			EndPainting ();
+			draw_status = DrawStatus.NONE;
+		}
+	}
+
+	public void on_detect_pressure(){
+		if (draw_status == DrawStatus.NONE && press_pen.press_measure.pressure > pressure_threshold) {
+			draw_status = DrawStatus.START;
+			Debug.Log ("start painting");
+		} else if ((draw_status == DrawStatus.ADD || draw_status == DrawStatus.START) && press_pen.press_measure.pressure < pressure_threshold) {
+			draw_status = DrawStatus.END;
+			Debug.Log ("stop painting");
 		}
 	}
 }
