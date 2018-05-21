@@ -15,12 +15,12 @@ public class DodecaTracker : MonoBehaviour {
 	[Tooltip("camera pose - translation")]
 	public Vector3 camera_tvec = Vector3.zero;
 	[Tooltip("PressPen marker map")]
-	public string marker_map_path = "/Resources/parameters/pens/dodecahedron_marker_map.yml";
+	public string marker_map_path = "/Resources/parameters/pens/presspen/dodecahedron_marker_map.yml";
 	[Tooltip("calibration board marker map")]
 	public string board_marker_map_path = "/Resources/parameters/board/board_marker_map.yml";
 
-	public string pentip_path = "/Resources/parameters/pens/pentip_calibration.yml";
-	public string dodeca_center_path = "/Resources/parameters/pens/dodeca_center_calibration.yml";
+	public string pentip_path = "/Resources/parameters/pens/presspen/pentip_calibration.yml";
+	public string dodeca_center_path = "/Resources/parameters/pens/presspen/dodeca_center_calibration.yml";
 
 	// ----------- pose --------------
 	// 局部坐标系（笔坐标系）下的pose

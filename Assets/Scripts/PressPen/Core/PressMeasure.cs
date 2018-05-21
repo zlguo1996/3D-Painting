@@ -10,7 +10,7 @@ public class PressMeasure : MonoBehaviour {
 	wrmhl myDevice = new wrmhl(); // wrmhl is the bridge beetwen computer and hardware.
 
 	[Tooltip("SerialPort of your device.")]
-	public string PortName = "/dev/cu.PressPen-DevB";
+    public string PortName = "/dev/cu.PressPen1-SPPDev";
 
 	[Tooltip("Baudrate")]
 	public int BaudRate = 9600;
@@ -36,8 +36,8 @@ public class PressMeasure : MonoBehaviour {
 		myDevice.set (PortName, BaudRate, ReadTimeout, QueueLenght); // This method set the communication with the following vars;
 		//                              Serial Port, Baud Rates, Read Timeout and QueueLenght.
 
-		connectBT ();
-		startListening ();
+		//connectBT ();
+		//startListening ();
 	}
 	
 	// Update is called once per frame
@@ -56,16 +56,12 @@ public class PressMeasure : MonoBehaviour {
 	}
 
 	// 监听蓝牙数据
-	public bool startListening(){
+	public void startListening(){
 		isListening = true;
 		StartCoroutine (getPressureLoop());
-
-		return true;
 	}
-	public bool stopListening(){
+	public void stopListening(){
 		isListening = false;
-
-		return true;
 	}
 
 	// 连接蓝牙

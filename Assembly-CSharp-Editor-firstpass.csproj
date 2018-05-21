@@ -59,21 +59,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_ClearWindow.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_EditorWindow.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Brush.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Lock.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Material.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Mesh.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Paint.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Presets.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Preview.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Texture.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_TilingOffset.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Main_Tools.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_Paintable_Editor.cs" />
-    <Compile Include="Assets\Plugins\Paint in 3D\Editor\P3D_ResizeWindow.cs" />
     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Editor\Gear\AnimatorGearEditor.cs" />
     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Editor\Gear\CameraGearEditor.cs" />
     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Editor\Gear\ConstantMotionGearEditor.cs" />
