@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{FEBA8C6F-C6A3-4C17-0952-8000CFC6384C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneBuilder/PenController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PressPen/Core/DodecaTracker.cs">
     <Files>
       <File FileName="Assets/Scripts/PressPen/Core/PressMeasure.cs" Line="13" Column="54" />
       <File FileName="Assets/Plugins/WRMHL/Scripts/Thread/Common/wrmhlThread.cs" Line="74" Column="1" />
-      <File FileName="Assets/Scripts/SceneBuilder/OperatingTable.cs" Line="25" Column="43" />
-      <File FileName="Assets/Scripts/SceneBuilder/PenController.cs" Line="27" Column="3" />
+      <File FileName="Assets/Scripts/SceneBuilder/OperatingTable.cs" Line="24" Column="19" />
+      <File FileName="Assets/Scripts/SceneBuilder/PenController.cs" Line="67" Column="69" />
+      <File FileName="Assets/Scripts/PressPen/UI/PentipCalibrator.cs" Line="46" Column="50" />
+      <File FileName="Assets/Scripts/PressPen/Core/DodecaTracker.cs" Line="173" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

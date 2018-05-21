@@ -40,10 +40,10 @@ public class PentipCalibrator : MonoBehaviour {
 	}
 
 	public void SaveCenterPose(){
-		SavePoseToFile (center, Application.dataPath + "/Resources/parameters/pens/dodeca_center_calibration.yml");
+		SavePoseToFile (center, Application.dataPath + "/Resources/parameters/pens/presspen/dodeca_center_calibration.yml");
 	}
 	public void SavePentipPose(){
-		SavePoseToFile (pentip, Application.dataPath + "/Resources/parameters/pens/pentip_calibration.yml");
+		SavePoseToFile (pentip, Application.dataPath + "/Resources/parameters/pens/presspen/pentip_calibration.yml");
 	}
 	public void SavePoseToFile(GameObject go, string file_path){
 		Debug.Assert (System.IO.File.Exists (file_path));
