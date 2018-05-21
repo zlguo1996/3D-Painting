@@ -241,7 +241,7 @@ public partial class P3D_Main
 			case TextureFormat.PVRTC_RGB2:     return TextureFormat.RGB24;
 			case TextureFormat.PVRTC_RGB4:     return TextureFormat.RGB24;
 			case TextureFormat.ETC_RGB4:       return TextureFormat.RGB24;
-			case TextureFormat.ATC_RGB4:       return TextureFormat.RGB24;
+			case TextureFormat.ETC_RGB4:       return TextureFormat.RGB24;
 			//case TextureFormat.ATF_RGB_DXT1:   return TextureFormat.RGB24;
 			//case TextureFormat.ATF_RGB_JPG:    return TextureFormat.RGB24;
 			case TextureFormat.ETC2_RGB:       return TextureFormat.RGB24;
