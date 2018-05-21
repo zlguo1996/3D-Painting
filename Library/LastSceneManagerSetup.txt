@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Application/3D Paint.unity
+- path: Assets/Scenes/Calibration/Pentip Calibration.unity
   isLoaded: 1
   isActive: 1
