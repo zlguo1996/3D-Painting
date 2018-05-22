@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class CameraVisualizer : MonoBehaviour {
 	public PressPen press_pen;
-	public float scale_parameter = 20.0f;
 
 	UnityAction on_detect_camera;
 
@@ -22,7 +21,7 @@ public class CameraVisualizer : MonoBehaviour {
 
 	void change_go_pose(){
 		PoseInfo pi = press_pen.getCameraPose ();
-		this.gameObject.transform.localPosition = pi.rt_mat.ExtractPosition().ScaleTo(scale_parameter);
+        this.gameObject.transform.localPosition = pi.rt_mat.ExtractPosition().ScaleTo(press_pen.scale_parameter);
 		this.gameObject.transform.localRotation = pi.rt_mat.ExtractRotation();
 	}
 }

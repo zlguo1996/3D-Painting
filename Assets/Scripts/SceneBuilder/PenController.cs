@@ -7,13 +7,15 @@ public class PenController : MonoBehaviour
 {
     public PressPen press_pen;
 
+    [HideInInspector]
     public Vector3 direction; // 笔尖z轴朝向（即朝向正十二面体中心）
 
-    // active状态可以用于激活其他物体
-    public bool isActivated = true;
+    [HideInInspector]
+    public bool isActivated = true; // active状态可以用于激活其他物体
+
     public int id = 0;
 
-    public int[] pressure_level_division = new int[2]{1000, 3000};
+    public int[] pressure_level_division = new int[2]{1000, 2500};
 	public enum PRESSURE_LEVEL
 	{
 		LEVEL_0, LEVEL_1, LEVEL_2
@@ -32,6 +34,16 @@ public class PenController : MonoBehaviour
                 case -1:
                     if (_pressure_level == PRESSURE_LEVEL.LEVEL_1) OnPressureDeceed_01.Invoke();
                     else if (_pressure_level == PRESSURE_LEVEL.LEVEL_2) OnPressureDeceed_12.Invoke();
+                    OnPressureLevelChange.Invoke();
+                    break;
+                case 2:
+                    OnPressureExceed_01.Invoke();
+                    OnPressureExceed_12.Invoke();
+                    OnPressureLevelChange.Invoke();
+                    break;
+                case -2:
+                    OnPressureDeceed_01.Invoke();
+                    OnPressureDeceed_12.Invoke();
                     OnPressureLevelChange.Invoke();
                     break;
                 default:

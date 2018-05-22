@@ -22,7 +22,8 @@ public class OperatingTable : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (move_mode) {
-            this.gameObject.transform.Translate (pc.direction);
+            Vector3 step = pc.direction.ScaleTo(0.05f);
+            this.gameObject.transform.Translate (step);
 		}
 	}
 

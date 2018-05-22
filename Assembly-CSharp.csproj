@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PressPen\Core\PressPen.cs" />
     <Compile Include="Assets\Scripts\PressPen\UI\CameraVisualizer.cs" />
     <Compile Include="Assets\Scripts\PressPen\UI\PentipCalibrator.cs" />
+    <Compile Include="Assets\Scripts\PressPen\UI\PentipVisualizer.cs" />
     <Compile Include="Assets\Scripts\PressPen\UI\PenVisualizer.cs" />
     <Compile Include="Assets\Scripts\PressPen\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\SceneBuilder\Model.cs" />

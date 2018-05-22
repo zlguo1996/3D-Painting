@@ -15,7 +15,6 @@ public class StrokeManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 	}
 	
 	// Update is called once per frame
@@ -57,8 +56,7 @@ public class StrokeManager : MonoBehaviour {
 
 		FrameInfo frame_info = press_pen.getFrame ();
 		Debug.Log (frame_info.rt_mat);
-		Vector3 tvec = (frame_info.rt_mat*press_pen.dodeca_tracker_thread.dodeca_tracker.pen_tip_pose).ExtractPosition();
-		tvec.Scale (new Vector3 (20.0f, 20.0f, 20.0f));
+        Vector3 tvec = (press_pen.scale_mat*frame_info.rt_mat*press_pen.dodeca_tracker_thread.dodeca_tracker.pen_tip_pose).ExtractPosition();
 		if (draw_status == DrawStatus.START) {
 			StartPainting (tvec, /*(float)frame_info.pressure/10.0f*/0.1f);
 			draw_status = DrawStatus.ADD;

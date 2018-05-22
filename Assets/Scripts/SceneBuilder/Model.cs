@@ -25,7 +25,7 @@ public class Model : MonoBehaviour {
 
 	// 进入激活状态
 	void OnTriggerEnter(Collider col){
-		if (!isActivated) {
+        if (!isActivated) {
 			PenController pc_in = col.gameObject.GetComponent<PenController> ();
 			if (pc_in != null && pc_in.isActivated) {
 				activate (pc_in);

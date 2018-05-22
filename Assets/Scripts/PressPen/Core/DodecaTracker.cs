@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class DodecaTracker : MonoBehaviour {
+    public bool useVirtualWebCam = false;
+
 	// ------------ 初始化参数 ------------
 	[Tooltip("video capture parameter file path")]
 	public string camera_parameter_path = "/Resources/parameters/cameras/logitech_brio_camera_calibration_1080p.yml";
@@ -64,6 +66,10 @@ public class DodecaTracker : MonoBehaviour {
 	private static extern bool _initCamera(string camera_parameter_path, int deviceNum);
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _initCameraRvecTvec(string camera_parameter_path, int deviceNum, float[] rvec, float[] tvec);
+    [DllImport("DodecaTrackerPlugin")]
+    private static extern bool _initCameraS(string camera_parameter_path, string file_path);
+    [DllImport("DodecaTrackerPlugin")]
+    private static extern bool _initCameraSRvecTvec(string camera_parameter_path, string file_path, float[] rvec, float[] tvec);
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _initPen(string marker_map_path);
 	[DllImport("DodecaTrackerPlugin")]
@@ -185,6 +191,8 @@ public class DodecaTracker : MonoBehaviour {
 	private static extern bool _getPenTipPose(float[] rt_mat);
 	[DllImport("DodecaTrackerPlugin")]
 	private static extern bool _getPenDodecaCenterPose(float[] rt_mat);
+    [DllImport("DodecaTrackerPlugin")]
+	private static extern bool _getPoseFromFile(float[] rt_mat, string file_path);
 
 	public bool setPenTip(string file_path){
 		if (_setPenTip (file_path)) {
@@ -285,6 +293,17 @@ public class DodecaTracker : MonoBehaviour {
 
 		return success;
 	}
+    public bool getPoseFromFile(ref Matrix4x4 rt_mat, string file_path){
+        if (!System.IO.File.Exists(file_path)) return false;
+        float[] rt_vec = new float[16];
+        bool success = _getPoseFromFile(rt_vec, file_path);
+        for (int i = 0; i < 16; i++)
+        {
+            rt_mat[i / 4, i % 4] = rt_vec[i];
+        }
+
+        return success;
+    }
 
 	void Start(){
 		camera_parameter_path = Application.dataPath + camera_parameter_path;
@@ -304,13 +323,10 @@ public class DodecaTracker : MonoBehaviour {
 		_DodecaTrackerPlugin ();
 
 		Debug.Assert (System.IO.File.Exists (camera_parameter_path));
-		if (false){//camera_rvec == null || camera_tvec == null) {
-			success = _initCamera (camera_parameter_path, device_num);
-		} else {
-			float[] rvec = new float[3]{ camera_rvec.x, camera_rvec.y, camera_rvec.z };
-			float[] tvec = new float[3]{ camera_tvec.x, camera_tvec.y, camera_tvec.z };
-			success = _initCameraRvecTvec (camera_parameter_path, device_num, rvec, tvec);
-		}
+		float[] rvec = new float[3]{ camera_rvec.x, camera_rvec.y, camera_rvec.z };
+		float[] tvec = new float[3]{ camera_tvec.x, camera_tvec.y, camera_tvec.z };
+        if(useVirtualWebCam) success = _initCameraSRvecTvec(camera_parameter_path, "udp://127.0.0.1:9999", rvec, tvec);
+        else success = _initCameraRvecTvec(camera_parameter_path, device_num, rvec, tvec);
 		Debug.Assert (success);
 
 		Debug.Assert (System.IO.File.Exists (marker_map_path));

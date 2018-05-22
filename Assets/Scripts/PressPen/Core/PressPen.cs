@@ -28,6 +28,9 @@ public class PressPen : MonoBehaviour {
 	public PressMeasure press_measure;
 	public DodecaTrackerThread dodeca_tracker_thread;
 
+    public float scale_parameter = 20.0f;
+    public Matrix4x4 scale_mat;
+
 	public UnityEvent OnDetectCamera = new UnityEvent();
 	public UnityEvent OnDetectDodeca = new UnityEvent();
 
@@ -47,6 +50,8 @@ public class PressPen : MonoBehaviour {
 		dodeca_tracker_thread.on_detect_cam.AddListener (cam_detected_action);
 		dodeca_detected_action += onDetectDodeca;
 		dodeca_tracker_thread.on_detect_dodeca.AddListener (dodeca_detected_action);
+
+        scale_mat = Matrix4x4.Scale(new Vector3(scale_parameter, scale_parameter, scale_parameter));
 	}
 	
 	// Update is called once per frame
