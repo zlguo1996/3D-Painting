@@ -1,14 +1,11 @@
 ﻿<Properties StartupConfiguration="{FEBA8C6F-C6A3-4C17-0952-8000CFC6384C}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneBuilder/Model.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sandbox/Model.cs">
     <Files>
-      <File FileName="Assets/Scripts/PressPen/UI/PenVisualizer.cs" Line="32" Column="70" />
-      <File FileName="Assets/Scripts/PressPen/UI/PentipVisualizer.cs" Line="24" Column="11" />
-      <File FileName="Assets/Scripts/SceneBuilder/OperatingTable.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/SceneBuilder/PenController.cs" Line="13" Column="22" />
-      <File FileName="Assets/Scripts/Paint/StrokeManager.cs" Line="59" Column="116" />
-      <File FileName="Assets/Scripts/PressPen/Core/DodecaTrackerThread.cs" Line="99" Column="40" />
-      <File FileName="Assets/Scripts/SceneBuilder/Model.cs" Line="28" Column="22" />
+      <File FileName="Assets/Scripts/Sandbox/OperatingTable.cs" Line="29" Column="183" />
+      <File FileName="Assets/Scripts/Sandbox/PenController.cs" Line="30" Column="58" />
+      <File FileName="Assets/Scripts/Sandbox/Model.cs" Line="88" Column="21" />
+      <File FileName="Assets/Scripts/Sandbox/AssignModelScripts.cs" Line="13" Column="89" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

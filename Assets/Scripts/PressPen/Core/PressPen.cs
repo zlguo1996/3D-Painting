@@ -28,7 +28,14 @@ public class PressPen : MonoBehaviour {
 	public PressMeasure press_measure;
 	public DodecaTrackerThread dodeca_tracker_thread;
 
-    public float scale_parameter = 20.0f;
+    public float scale_parameter{
+        get { return _scale_parameter;}
+        set {
+            _scale_parameter = value;
+            scale_mat = Matrix4x4.Scale(new Vector3(value, value, value));
+        }
+    }
+    private float _scale_parameter = 20.0f;
     public Matrix4x4 scale_mat;
 
 	public UnityEvent OnDetectCamera = new UnityEvent();
@@ -62,10 +69,16 @@ public class PressPen : MonoBehaviour {
 	public PoseInfo getCameraPose(){
 		return frames_cam [frames_cam.Count - 1];
 	}
+    public PoseInfo getPrevCameraPose(int offset){              // 0开始
+        return frames_cam[frames_cam.Count - 1 - offset];
+    }
 
 	public FrameInfo getFrame(){
 		return frames_dodeca [frames_dodeca.Count - 1];
 	}
+    public FrameInfo getPrevFrame(int offset){                  // 0开始
+        return frames_dodeca[frames_dodeca.Count - 1 - offset];
+    }
 //	public float getPressure(){
 //		Debug.Assert (frames.Count != 0);
 //		return frames;

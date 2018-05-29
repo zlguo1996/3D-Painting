@@ -59,6 +59,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Plugins\OutlineEffect\Demo\MaterialSwitcher.cs" />
+    <Compile Include="Assets\Plugins\OutlineEffect\Demo\OutlineAnimation.cs" />
+    <Compile Include="Assets\Plugins\OutlineEffect\Demo\Rotate.cs" />
+    <Compile Include="Assets\Plugins\OutlineEffect\Demo\Toggle.cs" />
+    <Compile Include="Assets\Plugins\OutlineEffect\LinkedSet.cs" />
+    <Compile Include="Assets\Plugins\OutlineEffect\Outline.cs" />
+    <Compile Include="Assets\Plugins\OutlineEffect\OutlineEffect.cs" />
     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\AnimatorGear.cs" />
     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\CameraGear.cs" />
     <Compile Include="Assets\Plugins\TiltBrush\ThirdParty\Reaktion\Gear\ConstantMotionGear.cs" />
@@ -120,10 +127,13 @@
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Hypercolor\Hypercolor.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\HyperGrid\HyperGrid.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Toon\Toon.shader" />
+    <None Include="Assets\Plugins\OutlineEffect\Resources\OutlineShader.shader" />
+    <None Include="Assets\Plugins\OutlineEffect\Resources\OutlineBufferShader.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseOpaque.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Shaders\Unlit-Diffuse.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Disco\Disco.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\WaveformPulse\NeonPulse.shader" />
+    <None Include="Assets\Plugins\SimpleAirport\Changelog.txt" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Highlighter\AdditiveCutout.shader" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Shaders\Include\Brush.cginc" />
     <None Include="Assets\Plugins\TiltBrush\TiltBrush\Assets\Brushes\Basic\Waveform\Waveform.shader" />

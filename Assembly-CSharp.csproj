@@ -70,10 +70,11 @@
     <Compile Include="Assets\Scripts\PressPen\UI\PentipVisualizer.cs" />
     <Compile Include="Assets\Scripts\PressPen\UI\PenVisualizer.cs" />
     <Compile Include="Assets\Scripts\PressPen\UI\UIManager.cs" />
-    <Compile Include="Assets\Scripts\SceneBuilder\Model.cs" />
-    <Compile Include="Assets\Scripts\SceneBuilder\ModelBox.cs" />
-    <Compile Include="Assets\Scripts\SceneBuilder\OperatingTable.cs" />
-    <Compile Include="Assets\Scripts\SceneBuilder\PenController.cs" />
+    <Compile Include="Assets\Scripts\Sandbox\AssignModelScripts.cs" />
+    <Compile Include="Assets\Scripts\Sandbox\Model.cs" />
+    <Compile Include="Assets\Scripts\Sandbox\ModelBox.cs" />
+    <Compile Include="Assets\Scripts\Sandbox\OperatingTable.cs" />
+    <Compile Include="Assets\Scripts\Sandbox\PenController.cs" />
     <Compile Include="Assets\Scripts\Test\Bluetooth.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
     <Compile Include="Assets\Scripts\Test\WebCamera.cs" />
