@@ -31,10 +31,43 @@ public class OperatingTable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () { 
+        //test
+        // 缩放
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            DodecaTracker dt = pc.press_pen.dodeca_tracker_thread.dodeca_tracker;
+            Matrix4x4 pose1 = pc.press_pen.getFrame().rt_mat, pose2 = pc.press_pen.getPrevFrame(1).rt_mat;
+
+            // 修改scale 笔尖向右放大，向左缩小
+            Vector3 pentip_translation = (pose1 * dt.pen_tip_pose).ExtractPosition() - (pose2 * dt.pen_tip_pose).ExtractPosition();
+            pc.press_pen.scale_parameter -= 10.0f * pentip_translation.x * (my_camera.transform.position - this.transform.position).magnitude / 20.0f;
+            if (pc.press_pen.scale_parameter < zoom_threashold[0]) pc.press_pen.scale_parameter = zoom_threashold[0];
+            else if (pc.press_pen.scale_parameter > zoom_threashold[1]) pc.press_pen.scale_parameter = zoom_threashold[1];
+            my_camera.transform.position = (my_camera.transform.position - this.transform.position).normalized * scale_parameter * pc.press_pen.scale_parameter + this.transform.position;
+        }
+        // 旋转
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            Debug.Log("rotate");
+            DodecaTracker dt = pc.press_pen.dodeca_tracker_thread.dodeca_tracker;
+            Matrix4x4 pose1 = pc.press_pen.getFrame().rt_mat, pose2 = pc.press_pen.getPrevFrame(1).rt_mat;
+
+            // 修改rotation 笔尖左右绕y轴旋转
+            Vector3 pentip_translation = (pose1 * dt.pen_tip_pose).ExtractPosition() - (pose2 * dt.pen_tip_pose).ExtractPosition();
+            this.transform.Rotate(0.0f, 30.0f * pentip_translation.x, 0.0f, Space.World);
+            Debug.Log(10.0f * pentip_translation.x);
+
+            // 修改rotation 前后绕x旋转
+            float step = (my_camera.transform.position - this.transform.position).magnitude / 20.0f;
+            my_camera.transform.Translate(0.0f, 10.0f * step * pentip_translation.z, 0.0f, Space.Self);
+            my_camera.transform.LookAt(this.transform);
+            my_camera.transform.position = (my_camera.transform.position - this.transform.position).normalized * scale_parameter * pc.press_pen.scale_parameter + this.transform.position;
+        }
+
         if (move_mode) 
         {
             // 缩放
-            if (Input.GetKey(KeyCode.LeftAlt))
+            if (false && Input.GetKey(KeyCode.LeftAlt))
             {
                 DodecaTracker dt = pc.press_pen.dodeca_tracker_thread.dodeca_tracker;
                 Matrix4x4 pose1 = pc.press_pen.getFrame().rt_mat, pose2 = pc.press_pen.getPrevFrame(1).rt_mat;
@@ -47,14 +80,14 @@ public class OperatingTable : MonoBehaviour {
                 my_camera.transform.position = (my_camera.transform.position - this.transform.position).normalized * scale_parameter * pc.press_pen.scale_parameter + this.transform.position;
             }
             // 旋转
-            else if(Input.GetKey(KeyCode.LeftControl)){
+            else if(false && Input.GetKey(KeyCode.LeftControl)){
                 Debug.Log("rotate");
                 DodecaTracker dt = pc.press_pen.dodeca_tracker_thread.dodeca_tracker;
                 Matrix4x4 pose1 = pc.press_pen.getFrame().rt_mat, pose2 = pc.press_pen.getPrevFrame(1).rt_mat;
 
                 // 修改rotation 笔尖左右绕y轴旋转
                 Vector3 pentip_translation = (pose1 * dt.pen_tip_pose).ExtractPosition() - (pose2 * dt.pen_tip_pose).ExtractPosition();
-                this.transform.Rotate(0.0f, 10.0f * pentip_translation.x, 0.0f, Space.World);
+                this.transform.Rotate(0.0f, 30.0f * pentip_translation.x, 0.0f, Space.World);
                 Debug.Log(10.0f * pentip_translation.x);
 
                 // 修改rotation 前后绕x旋转
@@ -73,9 +106,11 @@ public class OperatingTable : MonoBehaviour {
 	}
 
 	void StartMove(){
+        Debug.Log("stam");
 		move_mode = true;
 	}
 	void StopMove(){
+        Debug.Log("stom");
 		move_mode = false;
 	}
 }

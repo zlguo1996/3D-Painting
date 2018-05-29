@@ -29,11 +29,13 @@ public class PenController : MonoBehaviour
                 case 1:
                     if (_pressure_level == PRESSURE_LEVEL.LEVEL_0) OnPressureExceed_01.Invoke();
                     else if (_pressure_level == PRESSURE_LEVEL.LEVEL_1) OnPressureExceed_12.Invoke();
+                    Debug.Log("ivok");
                     OnPressureLevelChange.Invoke();
                     break;
                 case -1:
                     if (_pressure_level == PRESSURE_LEVEL.LEVEL_1) OnPressureDeceed_01.Invoke();
                     else if (_pressure_level == PRESSURE_LEVEL.LEVEL_2) OnPressureDeceed_12.Invoke();
+                    Debug.Log("ivok");
                     OnPressureLevelChange.Invoke();
                     break;
                 case 2:
@@ -101,43 +103,23 @@ public class PenController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            pressure_level += 1;
-            if (pressure_level > PRESSURE_LEVEL.LEVEL_2)
-                pressure_level = PRESSURE_LEVEL.LEVEL_2;
+            if (pressure_level < PRESSURE_LEVEL.LEVEL_2)
+                pressure_level = pressure_level + 1;
             Debug.Log(pressure_level);
-            switch (pressure_level)
-            {
-                case PRESSURE_LEVEL.LEVEL_1:
-                    OnPressureExceed_01.Invoke();
-                    break;
-                case PRESSURE_LEVEL.LEVEL_2:
-                    OnPressureExceed_12.Invoke();
-                    break;
-            }
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            pressure_level -= 1;
-            if (pressure_level < PRESSURE_LEVEL.LEVEL_0)
-                pressure_level = PRESSURE_LEVEL.LEVEL_0;
+            if (pressure_level > PRESSURE_LEVEL.LEVEL_0)
+                pressure_level = pressure_level - 1;
             Debug.Log(pressure_level);
-            switch (pressure_level)
-            {
-                case PRESSURE_LEVEL.LEVEL_0:
-                    OnPressureDeceed_01.Invoke();
-                    break;
-                case PRESSURE_LEVEL.LEVEL_1:
-                    OnPressureDeceed_12.Invoke();
-                    break;
-            }
         }
     }
 
     void _OnPressureChange(){
-        int press = press_pen.getFrame().pressure;
-        if (press > pressure_level_division[1]) pressure_level = PRESSURE_LEVEL.LEVEL_2;
-        else if (press > pressure_level_division[0]) pressure_level = PRESSURE_LEVEL.LEVEL_1;
-        else pressure_level = PRESSURE_LEVEL.LEVEL_0;
+        //int press = press_pen.getFrame().pressure;
+        //if (press > pressure_level_division[1]) pressure_level = PRESSURE_LEVEL.LEVEL_2;
+        //else if (press > pressure_level_division[0]) pressure_level = PRESSURE_LEVEL.LEVEL_1;
+        //else pressure_level = PRESSURE_LEVEL.LEVEL_0;
 
         OnPoseChange.Invoke();
 
